@@ -6,18 +6,18 @@ public class MostFrequentChar {
     static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter some text: ");
-        String text = scanner.nextLine();
-        text = text.toLowerCase();
-        text = text.replace(" ", "");
+        String testedString = scanner.nextLine();
+        testedString = testedString.toLowerCase();
+        testedString = testedString.replace(" ", "");
 
         int maxCount = 0;
         char mostFrequentChar = ' ';
 
-        for (int i = 0; i < text.length(); i++) {
-            char currantChar = text.charAt(i);
+        for (int i = 0; i < testedString.length(); i++) {
+            char currantChar = testedString.charAt(i);
             int currentCharCount = 0;
-            for (int j = 0; j < text.length(); j++) {
-                if (currantChar == text.charAt(j)) {
+            for (int j = 0; j < testedString.length(); j++) {
+                if (currantChar == testedString.charAt(j)) {
                     currentCharCount++;
                 }
             }
